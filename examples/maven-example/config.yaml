@@ -1,10 +1,10 @@
 version: 1
 type: maven
 resolver:
-  snapshotRepo: maven-snapshot-virtual
-  releaseRepo: test-maven2-virtual
+  snapshotRepo: keyshell-snapshot-virtual
+  releaseRepo: keyshell-maven-virtual
   serverID: rt-mvn-repo
 deployer:
-  snapshotRepo: maven-snapshot-virtual
-  releaseRepo: test-maven2-virtual
+  snapshotRepo: keyshell-snapshot-virtual
+  releaseRepo: keyshell-maven-virtual
   serverID: rt-mvn-repo
