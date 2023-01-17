@@ -11,7 +11,6 @@ steps:
 - name: 'docker.bintray.io/google-cloud-builder/java/jfrog:0.1'
   entrypoint: 'bash'
   args: ['-c', 'jfrog rt c rt-mvn-repo --url=https://keyshelltest.jfrog.io/artifactory --user=vysakhbt@gmail.com --password=Keyshell@9495']
-  secretEnv: ['APIKEY']
   dir: 'maven-example'
 
 # Build a sample maven project
@@ -26,11 +25,6 @@ steps:
   - '--tag=gcr.io/$PROJECT_ID/java-app:${BUILD_ID}'
   - '.'
   dir: 'maven-example'
-
-secrets:
-- kmsKeyName: projects/unique-cooler-362607/locations/global/keyRings/test_keyring/cryptoKeys/test_crypto_key
-  secretEnv:
-    APIKEY: CiQAkF1zbUqdVQXbyl9jotwtjutt0iePmTjEuQDtMtq79Xgv0s4SKgBLGRuBoTA8Q19wWAOicTia58kBJq/xZv1WEzIm+AYVWKUHkWKlfy+F6w==
 
 images:
 - 'gcr.io/$PROJECT_ID/java-app:${BUILD_ID}'
